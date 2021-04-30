@@ -19,4 +19,4 @@ jobs:
         key      : ${{ secrets.SSH_KEY }}
         
         script: |
-          ssh-keyscan -H ${{ secrets.HOST }} 
+          ssh -o UserKnownHostsFile=/home/anon_hkk/.ssh/known_hosts -tt
