@@ -12,10 +12,13 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - name: Copy file via SCP
-       uses: appleboy/scp-action@master
+       uses: appleboy/ssh-action@v0.1.2
        with:
         host     : ${{ secrets.HOST }}
         username : ${{ secrets.USERNAME }}
         key      : ${{ secrets.SSH_KEY }}
-        source: "folder"
-        target: "/var/www/it-dev.tech/html"
+        
+        script: |
+          rm -rf /var/www/it-dev.tech/html/index.html
+          git clone git@github.com:gokunull/testdeployment.git
+          echo "Deployment complete succsessfully"
