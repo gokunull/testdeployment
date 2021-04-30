@@ -20,5 +20,5 @@ jobs:
         
         script: |
           rm /var/www/it-dev.tech/html/index.html 
-          git@github.com:gokunull/testdeployment.git
+          git clone git@github.com:gokunull/testdeployment.git
           echo "Deployment complete succsessfully"
