@@ -19,6 +19,7 @@ jobs:
         key      : ${{ secrets.SSH_KEY }}
         
         script: |
+          ssh-keyscan -H ${{ secrets.HOST }} > ~/.ssh/known_hosts
           rm /var/www/it-dev.tech/html/index.html 
           git clone git@github.com:gokunull/testdeployment.git
           echo "Deployment complete succsessfully"
