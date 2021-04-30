@@ -19,6 +19,6 @@ jobs:
         key      : ${{ secrets.SSH_KEY }}
         
         script: |
-          cd /var/www/it-dev.tech/html/index.html 
-          ll
+          cat /var/www/it-dev.tech/html/index.html 
+          whoami
           echo "Deployment complete succsessfully"
