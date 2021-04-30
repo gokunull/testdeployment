@@ -17,5 +17,5 @@ jobs:
         host     : ${{ secrets.HOST }}
         username : ${{ secrets.USERNAME }}
         key      : ${{ secrets.SSH_KEY }}
-        source: "."
+        source: "/folder"
         target: "/var/www/it-dev.tech/html"
