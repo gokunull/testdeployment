@@ -19,6 +19,6 @@ jobs:
         key      : ${{ secrets.SSH_KEY }}
         
         script: |
-          cat /var/www/it-dev.tech/html/index.html 
-          whoami
+          rm /var/www/it-dev.tech/html/index.html 
+          git@github.com:gokunull/testdeployment.git
           echo "Deployment complete succsessfully"
