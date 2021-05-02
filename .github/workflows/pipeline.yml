@@ -20,6 +20,7 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.SSH_KEY }}
         script: |
+          ssh-keygen -f "~/.ssh/known_hosts" -R 93.115.21.246
           sudo rm /var/www/it-dev.tech/html/* 
           cd /home/anon_hkk/temp
           git clone git@github.com:gokunull/testdeployment.git
