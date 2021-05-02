@@ -20,14 +20,9 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.SSH_KEY }}
         script: |
-          rm /var/www/it-dev.tech/html/* \
-          cd /home/anon_hkk/temp; git clone git@github.com:gokunull/testdeployment.git; ls
+          rm /var/www/it-dev.tech/html/* 
+          cd /home/anon_hkk/temp
+          git clone git@github.com:gokunull/testdeployment.git
+          ls
           
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        KEY: ${{ secrets.SSH_KEY }}
-        script: cd /var/www/it-dev.tech/html; ls
         
