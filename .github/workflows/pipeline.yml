@@ -16,9 +16,9 @@ jobs:
     - name: Copy repository contents via scp
       uses: appleboy/ssh-action@master
       with:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        KEY: ${{ secrets.SSH_KEY }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
         script: |
           sudo rm /var/www/it-dev.tech/html/* 
           cd /home/anon_hkk/temp
