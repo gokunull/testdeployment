@@ -24,5 +24,5 @@ jobs:
           cd /home/anon_hkk/temp
           git clone git@github.com:gokunull/testdeployment.git
           ls /home/anon_hkk/temp
-          
+          mv /home/anon_hkk/temp/testdeployment/* /var/www/it-dev.tech/html
         
